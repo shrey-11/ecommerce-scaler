@@ -1,7 +1,6 @@
 package dev.shreyansh.ProductCatelogServices.fakeStoreApi;
 
 import dev.shreyansh.ProductCatelogServices.dtos.ProductDto;
-import dev.shreyansh.ProductCatelogServices.models.Category;
 import dev.shreyansh.ProductCatelogServices.models.Product;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
@@ -12,8 +11,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Component
 public class FakeStoreClient {
@@ -34,8 +32,14 @@ public class FakeStoreClient {
         return categoryList;
     }
 
-    public ResponseEntity<FakeStoreProductDto> getInCategory(int productId){
-        return null;
+    public FakeStoreProductDto[] getInCategory(String category){
+        RestTemplate restTemplate= restTemplateBuilder.build();
+        ResponseEntity<FakeStoreProductDto[]> response= restTemplate.getForEntity(
+                "https://fakestoreapi.com/products/category/{categoryName}",
+                FakeStoreProductDto[].class,
+                category
+        );
+        return response.getBody();
     }
 
     public FakeStoreProductDto getProduct(long productId){
