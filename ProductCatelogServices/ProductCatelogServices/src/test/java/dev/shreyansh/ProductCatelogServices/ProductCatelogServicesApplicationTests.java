@@ -21,18 +21,18 @@ class ProductCatelogServicesApplicationTests {
 
     @Test
     void testDifferentInheritances() {
-//        User user = new User();
-//        user.setName("naman@scaler.com");
-//        user.setPassword("password");
-//        user.setEmail("ABC@gmail.com");
-//        userRepository.save(user);
-//
-//        Mentor mentor = new Mentor();
-//        mentor.setName("nmn@sclr.com");
-//        mentor.setPassword("psswrd");
-//        mentor.setRating("4");
-//
-//        mentorRepository.save(mentor);
+        User user = new User();
+        user.setName("naman@scaler.com");
+        user.setPassword("password");
+        user.setEmail("ABC@gmail.com");
+        userRepository.save(user);
+
+        Mentor mentor = new Mentor();
+        mentor.setName("nmn@sclr.com");
+        mentor.setPassword("psswrd");
+        mentor.setRating("4");
+
+        mentorRepository.save(mentor);
     }
 
 }
