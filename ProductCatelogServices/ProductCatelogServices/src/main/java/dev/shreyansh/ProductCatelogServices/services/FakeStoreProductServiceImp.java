@@ -1,6 +1,5 @@
 package dev.shreyansh.ProductCatelogServices.services;
 
-import ch.qos.logback.core.net.server.Client;
 import dev.shreyansh.ProductCatelogServices.dtos.ProductDto;
 import dev.shreyansh.ProductCatelogServices.fakeStoreApi.FakeStoreClient;
 import dev.shreyansh.ProductCatelogServices.fakeStoreApi.FakeStoreProductDto;
@@ -12,10 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ProductServiceImp implements ProductService{
+public class FakeStoreProductServiceImp implements FakeStoreProductService {
 
     private FakeStoreClient fakeStoreClient;
-    ProductServiceImp(FakeStoreClient fakeStoreClient){
+    FakeStoreProductServiceImp(FakeStoreClient fakeStoreClient){
         this.fakeStoreClient=fakeStoreClient;
     }
     private ProductDto productToProductDto(Product product){

@@ -1,10 +1,9 @@
 package dev.shreyansh.ProductCatelogServices.controllers;
 
-import dev.shreyansh.ProductCatelogServices.dtos.CategoryDto;
 import dev.shreyansh.ProductCatelogServices.dtos.ProductDto;
 import dev.shreyansh.ProductCatelogServices.models.Category;
 import dev.shreyansh.ProductCatelogServices.models.Product;
-import dev.shreyansh.ProductCatelogServices.services.CategoryServiceImp;
+import dev.shreyansh.ProductCatelogServices.services.FakeStoreCategoryServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,11 +17,11 @@ import java.util.List;
 @Controller
 @RequestMapping("/products/category")
 
-public class CategoryController {
+public class FakeStoreCategoryController {
 
 
-    private CategoryServiceImp categoryServiceImp;
-    CategoryController(CategoryServiceImp categoryServiceImp){
+    private FakeStoreCategoryServiceImp categoryServiceImp;
+    FakeStoreCategoryController(FakeStoreCategoryServiceImp categoryServiceImp){
         this.categoryServiceImp=categoryServiceImp;
     }
 

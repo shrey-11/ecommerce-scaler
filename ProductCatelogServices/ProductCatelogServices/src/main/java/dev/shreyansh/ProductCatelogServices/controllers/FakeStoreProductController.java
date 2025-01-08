@@ -1,10 +1,9 @@
 package dev.shreyansh.ProductCatelogServices.controllers;
 
 import dev.shreyansh.ProductCatelogServices.dtos.ProductDto;
-import dev.shreyansh.ProductCatelogServices.fakeStoreApi.FakeStoreProductDto;
 import dev.shreyansh.ProductCatelogServices.models.Category;
 import dev.shreyansh.ProductCatelogServices.models.Product;
-import dev.shreyansh.ProductCatelogServices.services.ProductService;
+import dev.shreyansh.ProductCatelogServices.services.FakeStoreProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,9 +14,9 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/products")
-public class ProductController {
+public class FakeStoreProductController {
 
-    private ProductService productService;
+    private FakeStoreProductService productService;
 
     private Product productDtotoProduct(ProductDto productDto){
         Product product=new Product();
@@ -44,7 +43,7 @@ public class ProductController {
         return productDto;
     }
 
-    public ProductController(ProductService productService){
+    public FakeStoreProductController(FakeStoreProductService productService){
         this.productService= productService;
     }
 

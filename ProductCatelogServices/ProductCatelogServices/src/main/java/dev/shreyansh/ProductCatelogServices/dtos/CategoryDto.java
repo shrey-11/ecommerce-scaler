@@ -1,8 +1,11 @@
 package dev.shreyansh.ProductCatelogServices.dtos;
 
-import org.springframework.http.ResponseEntity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 public class CategoryDto {
-
-
+    private String Title;
 }

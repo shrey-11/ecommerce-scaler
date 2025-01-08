@@ -1,24 +1,20 @@
 package dev.shreyansh.ProductCatelogServices.services;
 
-import dev.shreyansh.ProductCatelogServices.dtos.CategoryDto;
 import dev.shreyansh.ProductCatelogServices.fakeStoreApi.FakeStoreClient;
 import dev.shreyansh.ProductCatelogServices.fakeStoreApi.FakeStoreProductDto;
 import dev.shreyansh.ProductCatelogServices.models.Category;
 import dev.shreyansh.ProductCatelogServices.models.Product;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CategoryServiceImp implements CategoryService{
+public class FakeStoreCategoryServiceImp implements FakeStoreCategoryService {
 
 
     private FakeStoreClient fakeStoreClient;
-    CategoryServiceImp(FakeStoreClient fakeStoreClient){
+    FakeStoreCategoryServiceImp(FakeStoreClient fakeStoreClient){
         this.fakeStoreClient=fakeStoreClient;
     }
 
